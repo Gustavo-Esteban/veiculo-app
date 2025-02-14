@@ -74,9 +74,9 @@ O teste prático teve como requisitos:
    - Para otimizar o desempenho da aplicação e melhorar a experiência do usuário
 
 
-###Como Executar o Projeto
+### Como Executar o Projeto
 
-##Pré-requisitos
+## Pré-requisitos
 - Antes de executar o projeto, certifique-se de ter instalado:
 
 - Node.js (versão 16 ou superior)
@@ -85,42 +85,42 @@ O teste prático teve como requisitos:
 
 - Git (para clonar o repositório)
 
-###Passos para Execução
+### Passos para Execução
 
-##Clone o Repositório:
+## Clone o Repositório:
 - git clone https://github.com/Gustavo-Esteban/veiculo-app.git
 
-##Backend:
+## Backend:
 
-#Navegue até a pasta do backend:
+# Navegue até a pasta do backend:
 - cd back-end
 
-#Instale as dependências:
+# Instale as dependências:
 - npm install
 
-#Inicie o servidor:
+# Inicie o servidor:
 - npm run start
 
-##Frontend:
+## Frontend:
 
-#Navegue até a pasta do frontend:
+# Navegue até a pasta do frontend:
 - cd front-end
 
-#Instale as dependências:
+# Instale as dependências:
 - npm install
 
-#Inicie a aplicação:
+# Inicie a aplicação:
 - ng serve
 
-##Acesse a Aplicação:
+## Acesse a Aplicação:
 
 - Frontend: Abra o navegador e acesse http://localhost:4200.
 
 - Backend (API): A API estará disponível em http://localhost:3000.
 
-##Testes Unitários (Backend)
+## Testes Unitários (Backend)
 
-#Para executar os testes unitários do backend, navegue até a pasta do backend e execute:
+# Para executar os testes unitários do backend, navegue até a pasta do backend e execute:
 - npm run test
 
 
