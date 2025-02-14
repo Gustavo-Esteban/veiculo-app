@@ -1,0 +1,31 @@
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "placa": "ABC-1234",
+      "chassi": "9BWZZZ377VT004251",
+      "renavam": "12345678901",
+      "modelo": "Gol",
+      "marca": "Volkswagen",
+      "ano": 2020
+    },
+    {
+      "id": 2,
+      "placa": "XYZ-5678",
+      "chassi": "9BWZZZ377VT004252",
+      "renavam": "98765432109",
+      "modelo": "Onix",
+      "marca": "Chevrolet",
+      "ano": 2021
+    },
+    {
+      "id": 3,
+      "placa": "DEF-9101",
+      "chassi": "9BWZZZ377VT004253",
+      "renavam": "11223344556",
+      "modelo": "HB20",
+      "marca": "Hyundai",
+      "ano": 2019
+    }
+  ]
+}

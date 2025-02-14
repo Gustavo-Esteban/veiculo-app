@@ -1,0 +1,54 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="placa">Placa:</label>
+    <input id="placa" formControlName="placa" />
+    <div *ngIf="form.get('placa')?.invalid && form.get('placa')?.touched">Placa é obrigatória.</div>
+  </div>
+
+  <div>
+    <label for="chassi">Chassi:</label>
+    <input id="chassi" formControlName="chassi" />
+    <div *ngIf="form.get('chassi')?.invalid && form.get('chassi')?.touched">
+      Chassi é obrigatório.
+    </div>
+  </div>
+
+  <div>
+    <label for="renavam">Renavam:</label>
+    <input id="renavam" formControlName="renavam" />
+    <div *ngIf="form.get('renavam')?.invalid && form.get('renavam')?.touched">
+      <div *ngIf="form.get('renavam')?.errors?.['required']">Renavam é obrigatório.</div>
+      <div *ngIf="form.get('renavam')?.errors?.['pattern']">
+        Renavam deve conter apenas números.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="modelo">Modelo:</label>
+    <input id="modelo" formControlName="modelo" />
+    <div *ngIf="form.get('modelo')?.invalid && form.get('modelo')?.touched">
+      Modelo é obrigatório.
+    </div>
+  </div>
+
+  <div>
+    <label for="marca">Marca:</label>
+    <input id="marca" formControlName="marca" />
+    <div *ngIf="form.get('marca')?.invalid && form.get('marca')?.touched">Marca é obrigatória.</div>
+  </div>
+
+  <div>
+    <label for="ano">Ano:</label>
+    <input id="ano" formControlName="ano" />
+    <div *ngIf="form.get('ano')?.invalid && form.get('ano')?.touched">
+      <div *ngIf="form.get('ano')?.errors?.['required']">Ano é obrigatório.</div>
+      <div *ngIf="form.get('ano')?.errors?.['pattern']">Ano deve ser um número de 4 dígitos.</div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">
+    {{ isEditMode ? 'Atualizar' : 'Criar' }}
+  </button>
+  <a class="cancel-button" (click)="onCancel()">Cancelar</a>
+</form>

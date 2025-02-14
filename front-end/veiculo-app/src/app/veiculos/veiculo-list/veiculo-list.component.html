@@ -1,0 +1,12 @@
+<div class="veiculo-list">
+  <div *ngFor="let veiculo of veiculos" class="veiculo-card">
+    <h3>{{ veiculo.modelo }} - {{ veiculo.marca }}</h3>
+    <p>Placa: {{ veiculo.placa }}</p>
+    <p>Chassi: {{ veiculo.chassi }}</p>
+    <p>Renavam: {{ veiculo.renavam }}</p>
+    <p>Ano: {{ veiculo.ano }}</p>
+    <button (click)="deletarVeiculo(veiculo.id)">Excluir</button>
+    <a [routerLink]="['/veiculos/editar', veiculo.id]">Editar</a>
+  </div>
+</div>
+<a routerLink="/veiculos/novo" class="add-button">Adicionar Veículo</a>
