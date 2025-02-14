@@ -1,32 +1,30 @@
-# veiculo-app
+# Veiculo App
 
-# Teste Prático - Infosistemas
+## Teste Prático - Infosistemas
 
 Este projeto foi desenvolvido como parte do processo seletivo para a empresa **Infosistemas**. O objetivo é demonstrar habilidades técnicas na criação de uma aplicação full-stack, utilizando **Node.js** para o backend e **Angular 16+** para o frontend. A aplicação consiste em um sistema de gerenciamento de veículos, com operações de CRUD (Create, Read, Update, Delete) e integração entre frontend e backend.
 
 ## Objetivos do Projeto
 
-O teste prático teve como requisitos:
+### Backend (Node.js)
+- Criar um CRUD de veículos com os seguintes atributos:
+  - `id`
+  - `placa`
+  - `chassi`
+  - `renavam`
+  - `modelo`
+  - `marca`
+  - `ano`
+- Implementar recursos REST para acesso aos dados dos veículos.
+- Desenvolver testes unitários utilizando **Mocha**.
 
-1. **Backend (Node.js)**:
-   - Criar um CRUD de veículos com os seguintes atributos:
-     - `id`
-     - `placa`
-     - `chassi`
-     - `renavam`
-     - `modelo`
-     - `marca`
-     - `ano`
-   - Implementar recursos REST para acesso aos dados dos veículos.
-   - Desenvolver testes unitários utilizando **Mocha**.
+### Frontend (Angular 16+)
+- Criar uma interface para listagem de veículos.
+- Integrar com o backend para exibir, adicionar, editar e excluir veículos.
+- Garantir uma experiência de usuário fluida e responsiva.
 
-2. **Frontend (Angular 16+)**:
-   - Criar uma interface para listagem de veículos.
-   - Integrar com o backend para exibir, adicionar, editar e excluir veículos.
-   - Garantir uma experiência de usuário fluida e responsiva.
-
-3. **Versionamento e Disponibilização**:
-   - Disponibilizar o projeto no GitHub, com um README detalhado explicando a estrutura, configuração e execução do projeto.
+### Versionamento e Disponibilização
+- Disponibilizar o projeto no GitHub, com um README detalhado explicando a estrutura, configuração e execução do projeto.
 
 ## Tecnologias Utilizadas
 
@@ -47,83 +45,78 @@ O teste prático teve como requisitos:
 ## Funcionalidades Implementadas
 
 ### Backend
-1. **CRUD de Veículos**:
-   - **Create**: Adicionar um novo veículo.
-   - **Read**: Listar todos os veículos ou buscar um veículo específico por ID.
-   - **Update**: Atualizar os dados de um veículo existente.
-   - **Delete**: Remover um veículo.
-
-2. **API REST**:
-   - Endpoints para todas as operações de CRUD.
-   - Respostas em formato JSON.
-
-3. **Testes Unitários**:
-   - Testes para cada operação do CRUD utilizando **Mocha**.
+- **CRUD de Veículos**:
+  - **Create**: Adicionar um novo veículo.
+  - **Read**: Listar todos os veículos ou buscar um veículo específico por ID.
+  - **Update**: Atualizar os dados de um veículo existente.
+  - **Delete**: Remover um veículo.
+- **API REST**:
+  - Endpoints para todas as operações de CRUD.
+  - Respostas em formato JSON.
+- **Testes Unitários**:
+  - Testes para cada operação do CRUD utilizando **Mocha**.
 
 ### Frontend
-1. **Listagem de Veículos**:
-   - Exibe todos os veículos cadastrados em uma tabela.
+- **Listagem de Veículos**:
+  - Exibe todos os veículos cadastrados em uma tabela.
+- **Formulário de Cadastro e Edição**:
+  - Interface para adicionar novos veículos ou editar veículos existentes.
+- **Integração com Backend**:
+  - Comunicação com a API REST para carregar, adicionar, editar e excluir veículos.
+- **Implementação de Lazy Loading**:
+  - Para otimizar o desempenho da aplicação e melhorar a experiência do usuário.
 
-2. **Formulário de Cadastro e Edição**:
-   - Interface para adicionar novos veículos ou editar veículos existentes.
+## Como Executar o Projeto
 
-3. **Integração com Backend**:
-   - Comunicação com a API REST para carregar, adicionar, editar e excluir veículos.
-  
-4. **Implementação de lazyLoading**:
-   - Para otimizar o desempenho da aplicação e melhorar a experiência do usuário
-
-
-### Como Executar o Projeto
-
-## Pré-requisitos
-- Antes de executar o projeto, certifique-se de ter instalado:
-
-- Node.js (versão 16 ou superior)
-
-- Angular CLI (para o frontend)
-
-- Git (para clonar o repositório)
+### Pré-requisitos
+Antes de executar o projeto, certifique-se de ter instalado:
+- **Node.js** (versão 16 ou superior)
+- **Angular CLI** (para o frontend)
+- **Git** (para clonar o repositório)
 
 ### Passos para Execução
 
-## Clone o Repositório:
-- git clone https://github.com/Gustavo-Esteban/veiculo-app.git
+#### Clone o Repositório:
+```sh
+git clone https://github.com/Gustavo-Esteban/veiculo-app.git
+```
 
-## Backend:
-
+#### Backend:
+```sh
 # Navegue até a pasta do backend:
-- cd back-end
+cd back-end
 
 # Instale as dependências:
-- npm install
+npm install
 
 # Inicie o servidor:
-- npm run start
+npm run start
+```
 
-## Frontend:
-
+#### Frontend:
+```sh
 # Navegue até a pasta do frontend:
-- cd front-end
+cd front-end
 
 # Instale as dependências:
-- npm install
+npm install
 
 # Inicie a aplicação:
-- ng serve
+ng serve
+```
 
-## Acesse a Aplicação:
+### Acesse a Aplicação
+- **Frontend**: Abra o navegador e acesse [http://localhost:4200](http://localhost:4200).
+- **Backend (API)**: A API estará disponível em [http://localhost:3000](http://localhost:3000).
 
-- Frontend: Abra o navegador e acesse http://localhost:4200.
-
-- Backend (API): A API estará disponível em http://localhost:3000.
-
-## Testes Unitários (Backend)
-
-# Para executar os testes unitários do backend, navegue até a pasta do backend e execute:
-- npm run test
-
+### Testes Unitários (Backend)
+Para executar os testes unitários do backend, navegue até a pasta do backend e execute:
+```sh
+npm run test
+```
 
 ## Conclusão
 
-Este projeto demonstra a capacidade de desenvolver uma aplicação full-stack funcional, seguindo boas práticas de desenvolvimento e integração entre frontend e backend. Agradeço à **Infosistemas** pela oportunidade de participar deste processo seletivo e espero que este trabalho atenda às expectativas.
+Este projeto demonstra a capacidade de desenvolver uma aplicação full-stack funcional, seguindo boas práticas de desenvolvimento e integração entre frontend e backend.
+Agradeço à **Infosistemas** pela oportunidade de participar deste processo seletivo e espero que este trabalho atenda às expectativas.
+
