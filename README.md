@@ -96,7 +96,7 @@ npm run start
 #### Frontend:
 ```sh
 # Navegue até a pasta do frontend:
-cd front-end
+cd front-end/veiculo-app
 
 # Instale as dependências:
 npm install
