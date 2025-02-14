@@ -1,10 +1,5 @@
 # veiculo-app
 
-## Pré-requisitos
-
-- Node.js (versão 16 ou superior)
-- Angular CLI
-
 # Teste Prático - Infosistemas
 
 Este projeto foi desenvolvido como parte do processo seletivo para a empresa **Infosistemas**. O objetivo é demonstrar habilidades técnicas na criação de uma aplicação full-stack, utilizando **Node.js** para o backend e **Angular 16+** para o frontend. A aplicação consiste em um sistema de gerenciamento de veículos, com operações de CRUD (Create, Read, Update, Delete) e integração entre frontend e backend.
@@ -77,6 +72,57 @@ O teste prático teve como requisitos:
   
 4. **Implementação de lazyLoading**:
    - Para otimizar o desempenho da aplicação e melhorar a experiência do usuário
+
+
+###Como Executar o Projeto
+
+##Pré-requisitos
+- Antes de executar o projeto, certifique-se de ter instalado:
+
+- Node.js (versão 16 ou superior)
+
+- Angular CLI (para o frontend)
+
+- Git (para clonar o repositório)
+
+###Passos para Execução
+
+##Clone o Repositório:
+- git clone https://github.com/Gustavo-Esteban/veiculo-app.git
+
+##Backend:
+
+#Navegue até a pasta do backend:
+- cd back-end
+
+#Instale as dependências:
+- npm install
+
+#Inicie o servidor:
+- npm run start
+
+##Frontend:
+
+#Navegue até a pasta do frontend:
+- cd front-end
+
+#Instale as dependências:
+- npm install
+
+#Inicie a aplicação:
+- ng serve
+
+##Acesse a Aplicação:
+
+- Frontend: Abra o navegador e acesse http://localhost:4200.
+
+- Backend (API): A API estará disponível em http://localhost:3000.
+
+##Testes Unitários (Backend)
+
+#Para executar os testes unitários do backend, navegue até a pasta do backend e execute:
+- npm run test
+
 
 ## Conclusão
 
