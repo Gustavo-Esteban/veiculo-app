@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
-import { VEICULOS_ROUTES } from './veiculos/veiculos.routes';
 
-export const APP_ROUTES: Routes = [
+export const routes: Routes = [
+  { path: '', redirectTo: 'veiculos', pathMatch: 'full' },
   {
     path: 'veiculos',
-    children: VEICULOS_ROUTES,
+    loadChildren: () => import('./veiculos/veiculos.routes').then((m) => m.VEICULOS_ROUTES),
   },
-  { path: '', redirectTo: 'veiculos', pathMatch: 'full' },
   { path: '**', redirectTo: 'veiculos' },
 ];

@@ -16,5 +16,4 @@ export const VEICULOS_ROUTES: Routes = [
     loadComponent: () =>
       import('./veiculo-form/veiculo-form.component').then((m) => m.VeiculoFormComponent),
   },
-  { path: '**', redirectTo: '' },
 ];
