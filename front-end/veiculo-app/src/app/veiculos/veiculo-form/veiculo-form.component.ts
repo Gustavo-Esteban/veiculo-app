@@ -37,25 +37,27 @@ export class VeiculoFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      if (params['id']) {
-        this.isEditMode = true;
-        this.veiculoId = params['id'];
-        if (this.veiculoId) {
-          this.carregarVeiculo(this.veiculoId);
+    this.route.params.subscribe({
+      next: (params) => {
+        if (params['id']) {
+          this.isEditMode = true;
+          this.veiculoId = params['id'];
+          if (this.veiculoId) {
+            this.carregarVeiculo(this.veiculoId);
+          }
         }
-      }
+      },
     });
   }
 
   carregarVeiculo(id: string): void {
-    this.veiculosService.buscarVeiculoPorId(id).subscribe(
-      (veiculo) => this.form.patchValue(veiculo),
-      (error) => {
+    this.veiculosService.buscarVeiculoPorId(id).subscribe({
+      next: (veiculo) => this.form.patchValue(veiculo),
+      error: (error) => {
         console.error('Erro ao carregar veículo:', error);
         this.router.navigate(['/']);
-      }
-    );
+      },
+    });
   }
 
   onSubmit(): void {
@@ -63,15 +65,15 @@ export class VeiculoFormComponent implements OnInit {
       const veiculo = this.form.value as Veiculo;
 
       if (this.isEditMode && this.veiculoId) {
-        this.veiculosService.atualizarVeiculo(this.veiculoId, veiculo).subscribe(
-          () => this.router.navigate(['/']),
-          (error) => console.error('Erro ao atualizar veículo:', error)
-        );
+        this.veiculosService.atualizarVeiculo(this.veiculoId, veiculo).subscribe({
+          next: () => this.router.navigate(['/']),
+          error: (error) => console.error('Erro ao atualizar veículo:', error),
+        });
       } else {
-        this.veiculosService.criarVeiculo(veiculo).subscribe(
-          () => this.router.navigate(['/']),
-          (error) => console.error('Erro ao criar veículo:', error)
-        );
+        this.veiculosService.criarVeiculo(veiculo).subscribe({
+          next: () => this.router.navigate(['/']),
+          error: (error) => console.error('Erro ao criar veículo:', error),
+        });
       }
     }
   }

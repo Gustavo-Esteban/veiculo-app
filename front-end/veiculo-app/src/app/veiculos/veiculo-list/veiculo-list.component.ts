@@ -21,18 +21,18 @@ export class VeiculoListComponent implements OnInit {
   }
 
   carregarVeiculos(): void {
-    this.veiculosService.listarVeiculos().subscribe(
-      (data) => (this.veiculos = data),
-      (error) => console.error('Erro ao carregar veículos:', error)
-    );
+    this.veiculosService.listarVeiculos().subscribe({
+      next: (data) => (this.veiculos = data),
+      error: (error) => console.error('Erro ao carregar veículos:', error),
+    });
   }
 
   deletarVeiculo(id: string): void {
     if (confirm('Tem certeza que deseja excluir este veículo?')) {
-      this.veiculosService.deletarVeiculo(id).subscribe(
-        () => this.carregarVeiculos(),
-        (error) => console.error('Erro ao excluir veículo:', error)
-      );
+      this.veiculosService.deletarVeiculo(id).subscribe({
+        next: () => this.carregarVeiculos(),
+        error: (error) => console.error('Erro ao excluir veículo:', error),
+      });
     }
   }
 }
